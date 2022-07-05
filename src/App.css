@@ -9,9 +9,9 @@
   line-height: 1.5;
 }
 :root {
-  --color-light: aliceblue;
-  --color-dark: #153243;
-  --first-color: #CCCCCC;
-  --second-color: #225D84;
-  --third-color: #1025DF;
+  --color-light: #fff;
+  --color-dark: #344648;
+  --first-color: #7D8E95;
+  --second-color: #FFBB98;
+  --third-color: #FBE0C3;
 }
