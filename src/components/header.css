@@ -1,0 +1,30 @@
+.Header {
+    margin-top: 60px;
+}
+
+.HeaderTitles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora', serif;
+    color: var(--color-dark);
+}
+
+.HeaderTitleSmall {
+position: absolute;
+top: 18%;
+font-size: 20px;
+}
+
+.HeaderTitleBig {
+    position: absolute;
+    top:20%;
+    font-size: 100px;
+}
+
+.HeaderImg {
+    width: 100%;
+    height: 450px;
+    margin-top: 80px;
+    object-fit: cover;
+}
