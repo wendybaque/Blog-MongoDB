@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "../components/topbar.css";
 import wendy from "../assets/wendy2.jpg"
 
 export default function TopBar() {
+    const user = false ;
   return (
     <div className="top">
         <div className="TopLeft">
@@ -13,15 +15,31 @@ export default function TopBar() {
         </div>
         <div className="TopCenter">
             <ul className="TopList">
-                <li className="TopListItem">HOME</li>
-                <li className="TopListItem">ABOUT</li>
-                <li className="TopListItem">CONTACT</li>
-                <li className="TopListItem">WRITE</li>
-                <li className="TopListItem">LOGOUT</li>
+                <li className="TopListItem">
+                    <Link to="/">HOME</Link>
+                </li>
+                <li className="TopListItem">
+                <Link to="/">ABOUT</Link>
+                </li>
+                <li className="TopListItem">
+                <Link to="/">CONTACT</Link>
+                </li>
+                <li className="TopListItem">
+                <Link to="/Write">WRITE</Link>
+                </li>
+                <li className="TopListItem">
+                    {user && "LOGOUT"}
+                </li>
             </ul>
         </div>
         <div className="TopRight">
-            <img src={wendy} alt="Profil de Wendy Baqué" className='TopImg'/>
+            {user ? ( <img src={wendy} alt="Profil de Wendy Baqué" className='TopImg'/>
+) : (
+    <ul className='TopList'>
+        <li className='TopListItem'><Link to="/Login">Se connecter</Link></li>
+        <li className='TopListItem'><Link to="/Register">Créer un compte</Link></li>
+    </ul>
+)}
             <i className="TopSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>

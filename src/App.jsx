@@ -13,7 +13,7 @@ import Register from "./pages/Register";
 import Page404 from "./pages/Page404";
 
 function App() {
-  const user = true;
+  const user = false;
 
   return (
     <div className="App">
