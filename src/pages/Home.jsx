@@ -3,14 +3,14 @@ import Header from '../components/Header';
 
 import "../pages/home.css";
 import SideBar from '../components/SideBar';
-import Post from '../components/Post';
+import Posts from '../components/Posts';
 
 export default function Home() {
   return (
     <div>
       <Header />
     <div className='Home'>
-      <Post />
+      <Posts />
       <SideBar />
     </div>
     </div>
