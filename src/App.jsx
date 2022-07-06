@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Write from "./pages/Write";
 import Settings from "./pages/Settings";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Single" element={<Single />} />
             <Route path="/Write" element={<Write />} />
-            <Route path="/Setting" element={<Settings />} />
+            <Route path="/Settings" element={<Settings />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
             {/* <Route path="*" element={<Page404 />} /> */}
           </Routes>
         </Router>

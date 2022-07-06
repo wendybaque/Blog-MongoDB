@@ -67,6 +67,7 @@
 
 .SettingsForm > input {
     color: var(--first-color);
+    background-color: var(--color-light);
     border-bottom: 1px solid #7D8E95;
     border-radius: 5px;
     padding: 10px;
