@@ -10,22 +10,28 @@ import Write from "./pages/Write";
 import Settings from "./pages/Settings";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import Page404 from "./pages/Page404";
 
 function App() {
+  const user = true;
+
   return (
     <div className="App">
-        <TopBar />
+        
         <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Single" element={<Single />} />
-            <Route path="/Write" element={<Write />} />
-            <Route path="/Settings" element={<Settings />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Register" element={<Register />} />
-            {/* <Route path="*" element={<Page404 />} /> */}
-          </Routes>
+          <TopBar />
+
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Write" element={user ? <Write /> : <Register />} />
+                <Route path="/Settings" element={user ? <Settings /> : <Register/>} />
+                <Route path="/Post/:postId" element={<Single />} />
+                <Route path="/Login" element={user ? <Home/> : <Login />} />
+                <Route path="/Register" element={user ? <Home/> : <Register />} />
+                <Route path="/Single" element={<Single />} />
+                <Route path="*" element={<Page404 />} />
+                </Routes>
+
         </Router>
     </div>
   );
