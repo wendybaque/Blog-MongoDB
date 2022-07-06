@@ -7,6 +7,7 @@ import TopBar from "./components/TopBar";
 import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Write from "./pages/Write";
+import Settings from "./pages/Settings";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Single" element={<Single />} />
             <Route path="/Write" element={<Write />} />
+            <Route path="/Setting" element={<Settings />} />
             {/* <Route path="*" element={<Page404 />} /> */}
           </Routes>
         </Router>
