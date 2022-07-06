@@ -5,6 +5,7 @@ import "./App.css";
 
 import TopBar from "./components/TopBar";
 import Home from "./pages/Home";
+import Single from "./pages/Single"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Single" element={<Single />} />
             {/* <Route path="*" element={<Page404 />} /> */}
           </Routes>
         </Router>
