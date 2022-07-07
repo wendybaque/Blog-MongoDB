@@ -27,10 +27,10 @@
 }
 
 .LoginInput {
+    box-shadow: 5px 5px 5px #FFBB98;
     width: 500px;
     background-color: var(--color-light);
     color: var(--first-color);
-    border-bottom: 1px solid #7D8E95;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
@@ -38,6 +38,7 @@
 }
 
 .LoginButton {
+    box-shadow: 5px 5px 5px #FFBB98;
     width: 150px;
     align-self: center;
     background-color: teal;
@@ -49,6 +50,7 @@
 }
 
 .LoginRegisterButton {
+    box-shadow: 5px 5px 5px #FFBB98;
     position: absolute;
     top: 60px;
     right: 20px;

@@ -27,17 +27,18 @@
 }
 
 .RegisterInput {
+    box-shadow: 5px 5px 5px #FFBB98;
     width: 500px;
     padding: 10px;
     background-color: var(--color-light);
     color: var(--first-color);
-    border-bottom: 1px solid #7D8E95;
     border-radius: 5px;
     margin: 10px 0;
     height: 30px;
 }
 
 .RegisterButton {
+    box-shadow: 5px 5px 5px #FFBB98;
     width: 150px;
     align-self: center;
     background-color: tomato;
@@ -49,6 +50,7 @@
 }
 
 .RegisterLoginButton {
+    box-shadow: 5px 5px 5px #FFBB98;
     position: absolute;
     top: 60px;
     right: 20px;

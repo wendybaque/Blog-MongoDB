@@ -20,6 +20,7 @@ font-size: 20px;
     position: absolute;
     top:18%;
     font-size: 120px;
+    text-shadow: 5px 5px 5px #FFBB98;
 }
 
 .HeaderImg {
