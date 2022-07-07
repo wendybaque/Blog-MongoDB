@@ -13,7 +13,11 @@
 }
 
 .LoginForm {
+    border-radius: 10px;
+    border:none;
+    background-color: var(--third-color);
     margin-top: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }

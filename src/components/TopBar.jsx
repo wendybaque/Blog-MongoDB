@@ -16,16 +16,16 @@ export default function TopBar() {
         <div className="TopCenter">
             <ul className="TopList">
                 <li className="TopListItem">
-                    <Link to="/">HOME</Link>
+                    <Link to="/">ACCUEIL</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/">ABOUT</Link>
+                <Link to="/About">A PROPOS</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/">CONTACT</Link>
+                <Link to="/Contact">CONTACT</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/Write">WRITE</Link>
+                <Link to="/Write">ECRIRE</Link>
                 </li>
                 <li className="TopListItem">
                     {user && "LOGOUT"}

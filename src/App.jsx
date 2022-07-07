@@ -11,6 +11,8 @@ import Settings from "./pages/Settings";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Page404 from "./pages/Page404";
+import Contact from "./pages/Contact";
+import About from "./pages/About"
 
 function App() {
   const user = false;
@@ -20,7 +22,6 @@ function App() {
         
         <Router>
           <TopBar />
-
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Write" element={user ? <Write /> : <Register />} />
@@ -29,6 +30,9 @@ function App() {
                 <Route path="/Login" element={user ? <Home/> : <Login />} />
                 <Route path="/Register" element={user ? <Home/> : <Register />} />
                 <Route path="/Single" element={<Single />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Contact" element={<Contact />} />
+
                 <Route path="*" element={<Page404 />} />
                 </Routes>
 
