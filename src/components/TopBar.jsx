@@ -8,10 +8,10 @@ export default function TopBar() {
   return (
     <div className="top">
         <div className="TopLeft">
-            <i className="TopIcon fa-brands fa-facebook-square"></i>
-            <i className="TopIcon fa-brands fa-instagram-square"></i>
-            <i className="TopIcon fa-solid fa-book-atlas"></i>
-            <i className="TopIcon fa-solid fa-envelope"></i>
+        <a href="https://www.facebook.com/AntiigoneWB" alt="redirection vers Facebook" target="_blank" rel="noreferrer"><i className="SideBarIcon fa-brands fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/wendybqe/" alt="redirection vers Instagram" target="_blank" rel="noreferrer"><i className="SideBarIcon fa-brands fa-instagram-square"></i></a>
+            <a href="https://site-auteure.vercel.app/" alt="redirection vers le site internet de Wendy Baqué" target="_blank" rel="noreferrer"><i className="SideBarIcon fa-solid fa-book-atlas"></i></a>
+            <a href="/Contact" alt="redirection vers la page contact" target="_blank" rel="noreferrer"><i className="SideBarIcon fa-solid fa-envelope"></i></a>
         </div>
         <div className="TopCenter">
             <ul className="TopList">
