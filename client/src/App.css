@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+:root {
+  --color-light: #fff;
+  --color-dark: #344648;
+  --first-color: #7D8E95;
+  --second-color: #FFBB98;
+  --third-color: #FBE0C3;
+}
