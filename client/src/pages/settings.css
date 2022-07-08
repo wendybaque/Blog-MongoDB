@@ -1,0 +1,87 @@
+.Settings {
+    display: flex;
+
+}
+
+.SettingsWrapper {
+    flex:9;
+    padding: 20px;
+}
+
+.SettingsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.SettingsUpdateTitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
+.SettingsDeleteTitle {
+    color:tomato;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.SettingsForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SettingsPP {
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+}
+
+.SettingsPP > img {
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.SettingsPPIcon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.SettingsForm > label {
+    color: var(--color-dark);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.SettingsForm > input {
+    color: var(--first-color);
+    background-color: var(--color-light);
+    border-bottom: 1px solid #7D8E95;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 30px;
+}
+
+.SettingsSubmit {
+    width: 150px;
+    align-self: center;
+    background-color: teal;
+    color: var(--third-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
