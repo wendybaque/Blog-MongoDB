@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users.js");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -22,6 +23,8 @@ mongoose
   app.use("/api/auth", authRoute);
   // Route pour les utilisateurs :
   app.use("/api/users", userRoute);
+  // Route pour les posts : 
+  app.use("/api/posts", postRoute);
 
   // URL de base :
 // app.use("/", (req, res ) => {
