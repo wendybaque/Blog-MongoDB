@@ -3,6 +3,7 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 
 //CREATE POST
+// POST : http://localhost:5000/api/posts/ + ajouter les champs dans le body
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
@@ -14,6 +15,7 @@ router.post("/", async (req, res) => {
 });
 
 //UPDATE POST
+// PUT : http://localhost:5000/api/posts/:id + modifier qqch dans le body
 router.put("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -39,6 +41,7 @@ router.put("/:id", async (req, res) => {
 });
 
 //DELETE POST
+// DELETE : http://localhost:5000/api/posts/:id
 router.delete("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -58,6 +61,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 //GET 1 POST
+// GET : http://localhost:5000/api/posts/:id
 router.get("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -68,6 +72,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //GET ALL POSTS
+// GET : http://localhost:5000/api/posts/
 router.get("/", async (req, res) => {
   const username = req.query.user;
   const catName = req.query.cat;

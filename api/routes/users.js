@@ -4,6 +4,7 @@ const Post = require("../models/Post");
 const bcrypt = require("bcrypt");
 
 //UPDATE un utilisateur
+// PUT : http://localhost:5000/api/users/:id + changer qqch dans le body
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
@@ -28,6 +29,7 @@ router.put("/:id", async (req, res) => {
 });
 
 //DELETE un utilisateur :
+// DELETE : http://localhost:5000/api/users/:id
 router.delete("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
       try {
@@ -48,6 +50,7 @@ router.delete("/:id", async (req, res) => {
   });
   
   //GET un utilisateur :
+// GET : http://localhost:5000/api/users/:id ou sans id pour tous les utilisateurs
   router.get("/:id", async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
