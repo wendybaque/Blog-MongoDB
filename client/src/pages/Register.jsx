@@ -1,11 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 import '../pages/register.css';
 
 export default function Register() {
   return (
     <div className='Register'>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Créer un compte | Blog d'Antiigone</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <span className="RegisterTitle">CREER UN COMPTE</span>
       <form className="RegisterForm">
         <label>Identifiant</label>

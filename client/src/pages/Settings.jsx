@@ -1,4 +1,6 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
+
 import "../pages/settings.css";
 import SideBar from "../components/SideBar";
 import wendy from "../assets/wendy2.jpg"
@@ -6,6 +8,11 @@ import wendy from "../assets/wendy2.jpg"
 export default function Settings() {
   return (
     <div className='Settings'>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Paramètres | Blog d'Antiigone</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
         <div className="SettingsWrapper">
           <div className="SettingsTitle">
             <span className="SettingsUpdateTitle">Modifier ton compte</span>
