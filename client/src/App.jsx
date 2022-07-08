@@ -12,7 +12,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Page404 from "./pages/Page404";
 import Contact from "./pages/Contact";
-import About from "./pages/About"
+import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   const user = false;
@@ -32,10 +33,9 @@ function App() {
                 <Route path="/Single" element={<Single />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Contact" element={<Contact />} />
-
                 <Route path="*" element={<Page404 />} />
                 </Routes>
-
+          < Footer />
         </Router>
     </div>
   );
