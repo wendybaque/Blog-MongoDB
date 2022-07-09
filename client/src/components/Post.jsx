@@ -1,21 +1,23 @@
 import React from 'react'
 import "../components/post.css";
-import livre2 from '../assets/livre2.jpg'
+import {Link} from "react-router-dom";
 
-export default function Post() {
+export default function Post({post}) {
+
   return (
     <div className='Post'>
-        <img src={livre2} alt="Bannière de post" className='PostImg'/>
+        {post.photo && <img src={post.photo} alt="Bannière de post" className='PostImg'/> }
         <div className="PostInfo">
           <div className="PostCategories">
-            <span className="PostCat">Roman</span>
-            <span className="PostCat">Coup de Coeur</span>
+            {post.categories.map(c=>
+              <span className="PostCat">{c.name}</span>
+              )}
           </div>
-            <span className="PostTitle">Chronique : Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+          <Link to={`/post/${post._id}`}><span className="PostTitle">{post.title}</span></Link>
             <hr/>
-            <span className="PostDate">1 hour ago</span>
+            <span className="PostDate">{new Date(post.createdAt).toDateString}</span>
         </div>
-        <p className='PostDescr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam quae voluptatibus exercitationem atque, dignissimos aspernatur temporibus distinctio qui harum facilis odit, explicabo, dolorum accusamus! Ipsam doloremque temporibus officiis facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam quae voluptatibus exercitationem atque, dignissimos aspernatur temporibus distinctio qui harum facilis odit, explicabo, dolorum accusamus! Ipsam doloremque temporibus officiis facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam quae voluptatibus exercitationem atque, dignissimos aspernatur temporibus distinctio qui harum facilis odit, explicabo, dolorum accusamus! Ipsam doloremque temporibus officiis facilis?</p>
+        <p className='PostDescr'>{post.desc}</p>
     </div>
   )
 }

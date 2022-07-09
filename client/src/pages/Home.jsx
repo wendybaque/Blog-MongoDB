@@ -1,12 +1,26 @@
-import React from 'react'
-import {Helmet} from "react-helmet";
+import React, { useEffect, useState } from 'react'
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router";
 
 import "../pages/home.css";
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import Posts from '../components/Posts';
 
+import axios from "axios";
+
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  const { search } = useLocation();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await axios.get("http://localhost:5000/api/posts" + search);
+      setPosts(res.data);
+    };
+    fetchPosts();
+  }, [search]);
+
   return (
     <div>
       <Helmet>
@@ -16,7 +30,7 @@ export default function Home() {
       </Helmet>
       <Header />
     <div className='Home'>
-      <Posts />
+      <Posts posts={posts}/>
       <SideBar />
     </div>
     </div>
