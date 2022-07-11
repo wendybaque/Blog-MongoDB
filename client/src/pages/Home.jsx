@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from "react-helmet";
-// import { useLocation } from "react-router";
+import { useLocation } from "react-router";
 
 import "../pages/home.css";
 import Header from '../components/Header';
@@ -11,14 +11,15 @@ import axios from "axios";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
+  const { search } = useLocation();
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts");
+      const res = await axios.get("/posts" + search);
       setPosts(res.data)
     }
   fetchPosts()
-  }, []);
+  }, [search]);
 
   return (
     <div>
