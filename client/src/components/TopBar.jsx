@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from "../context/Context";
 import "../components/topbar.css";
 import wendy from "../assets/wendy2.jpg"
 
 export default function TopBar() {
-    const user = false ;
+    const { user } = useContext(Context);
   return (
     <div className="top">
         <div className="TopLeft">
@@ -19,13 +21,13 @@ export default function TopBar() {
                     <Link to="/">ACCUEIL</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/About">A PROPOS</Link>
+                    <Link to="/About">A PROPOS</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/Contact">CONTACT</Link>
+                    <Link to="/Contact">CONTACT</Link>
                 </li>
                 <li className="TopListItem">
-                <Link to="/Write">ECRIRE</Link>
+                    <Link to="/Write">ECRIRE</Link>
                 </li>
                 <li className="TopListItem">
                     {user && "LOGOUT"}
