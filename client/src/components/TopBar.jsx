@@ -6,7 +6,12 @@ import "../components/topbar.css";
 import wendy from "../assets/wendy2.jpg"
 
 export default function TopBar() {
-    const { user } = useContext(Context);
+    const { user , dispatch} = useContext(Context);
+    
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+      };
+
   return (
     <div className="top">
         <div className="TopLeft">
@@ -30,7 +35,7 @@ export default function TopBar() {
                     <Link to="/Write">ECRIRE</Link>
                 </li>
                 <li className="TopListItem">
-                    {user && "LOGOUT"}
+                    onClick={handleLogout}{user && "LOGOUT"}
                 </li>
             </ul>
         </div>
