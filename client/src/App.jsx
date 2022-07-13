@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useContext } from "react";
-import { Context } from "./context/Context";
+// import { useContext } from "react";
+// import { Context } from "./context/Context";
 import "./App.css";
 
 import TopBar from "./components/TopBar";
@@ -17,7 +17,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
-  const { user } = useContext(Context);
+  const { user } = true;
 
   return (
     <div className="App">
@@ -25,13 +25,12 @@ function App() {
         <Router>
           <TopBar />
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route exact path="/" element={<Home />} />
+                <Route path="/register" element={user ? <Home/> : <Register />} />
+                <Route path="/login" element={user ? <Home/> : <Login />} />
                 <Route path="/Write" element={user ? <Write /> : <Register />} />
                 <Route path="/Settings" element={user ? <Settings /> : <Register/>} />
                 <Route path="/Post/:postId" element={<Single />} />
-                <Route path="/Login" element={user ? <Home/> : <Login />} />
-                <Route path="/Register" element={user ? <Home/> : <Register />} />
-                <Route path="/Single" element={<Single />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="*" element={<Page404 />} />

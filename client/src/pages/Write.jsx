@@ -1,8 +1,8 @@
 import React from 'react'
-import {Helmet} from "react-helmet";
-
 import "../pages/write.css";
 import ranglivres from "../assets/ranglivres.webp"
+import { Helmet } from "react-helmet";
+
 
 export default function Write() {
   return (
@@ -22,10 +22,10 @@ export default function Write() {
             <div className="WriteFormGroup">
                 <textarea type="text" placeholder='Ecris ta chronique' className='WriteInput WriteText'></textarea>
             </div>
-            <button className="WriteSubmit">
+            <button type="submit" className="WriteSubmit">
                 Publier
             </button>
         </form>
     </div>
-  )
+  );
 }
