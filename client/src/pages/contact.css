@@ -1,10 +1,11 @@
 .Contact {
-    background : linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://i.pinimg.com/736x/b9/d0/83/b9d083c6561fe917b70c7b7a3dad9ff0.jpg");
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    justify-content: center;
+    background : linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://i.pinimg.com/originals/6e/2e/4d/6e2e4d84608fdbf27d8e29296e3e201c.jpg");
+    background-size: cover;
+    overflow-y: hidden;
 }
 
 .Contact-wrapper {
@@ -13,16 +14,18 @@
     align-items: center;
     margin: 10px;
     padding: 10px;
+    overflow-y: hidden;
 }
 
 .Contact-form {
-    background-color: var(--third-color);
+    overflow-y: hidden;
     border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
+    border:none;
+    background-color: var(--third-color);
+    margin-top: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -34,7 +37,13 @@
 
 }
 
+.Contact > label {
+    overflow-y: hidden;
+    margin: 10px 0;
+}
+
 .Contact-input {
+    overflow-y: hidden;
     box-shadow: 5px 5px 5px #FFBB98;
     width: 500px;
     background-color: var(--color-light);
@@ -47,7 +56,8 @@
 }
 
 .Contact-textarea {
-    height: 40em;
+    overflow-y: hidden;
+    height: 20em;
     width: 500px;
     border:none;
     border-radius: 5px;
@@ -59,14 +69,15 @@
 }
 
 .Contact-submit-button {
+    overflow-y: hidden;
     box-shadow: 5px 5px 5px #FFBB98;
+    width: 150px;
+    align-self: center;
+    background-color: teal;
+    color: var(--third-color);
     border-radius: 10px;
     padding: 10px;
-    background-color: tomato;
-    color: var(--third-color);
+    margin-top: 20px;
     cursor: pointer;
     border:none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }

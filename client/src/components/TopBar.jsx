@@ -17,16 +17,16 @@ export default function TopBar() {
         <div className="TopCenter">
             <ul className="TopList">
                 <li className="TopListItem">
-                    <Link to="/">ACCUEIL</Link>
+                    <Link to="/" className='link'>ACCUEIL</Link>
                 </li>
                 <li className="TopListItem">
-                    <Link to="/About">A PROPOS</Link>
+                    <Link to="/About" className='link'>A PROPOS</Link>
                 </li>
                 <li className="TopListItem">
-                    <Link to="/Contact">CONTACT</Link>
+                    <Link to="/Contact" className='link'>CONTACT</Link>
                 </li>
                 <li className="TopListItem">
-                    <Link to="/Write">ECRIRE</Link>
+                    <Link to="/Write" className='link'>ECRIRE</Link>
                 </li>
                 <li className="TopListItem" >
                     LOGOUT
@@ -37,8 +37,8 @@ export default function TopBar() {
              <img src={wendy} alt="Profil de Wendy Baqué" className='TopImg'/>
 
     <ul className='TopList'>
-        <li className='TopListItem'><Link to="/Login">Se connecter</Link></li>
-        <li className='TopListItem'><Link to="/Register">Créer un compte</Link></li>
+        <li className='TopListItem'><Link to="/Login" className='link'>Se connecter</Link></li>
+        <li className='TopListItem'><Link to="/Register" className='link'>Créer un compte</Link></li>
     </ul>
             {/* <i className="TopSearchIcon fa-solid fa-magnifying-glass"></i> */}
         </div>

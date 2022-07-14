@@ -24,9 +24,9 @@ export default function SideBar() {
         <p>Connue sous le pseudo d'Antiigone, Wendy Baqué est une auteure qui adore jouer avec les mots.</p>
 ​        <p>Auteure autodidacte et créative de 4 romans dans des genres différents, elle est aussi une grande lectrice ! </p> 
         <p>Ses préférences s'orientent vers des romans contemporains et réalistes, avec une préférence pour les romans feel-good et sur la musique, avec des thématiques fortes et actuelles... tout comme ses propres romans !</p>
-        <p>C'est tout naturellement qu'en 2019, elle commence à écrire des chroniques de ses coups de cœur littéraires sur <a href="https://www.facebook.com/AntiigoneWB" alt="redirection page Facebook" target="_blank" rel="noreferrer"> <b>sa page Facebook</b></a>, puis sur ce blog. A travers ses avis, elle souhaite aider les auteurs auto-édités et les maisons d'éditions indépendantes à se faire connaître. </p>
+        <p>C'est tout naturellement qu'en 2019, elle commence à écrire des chroniques de ses coups de cœur littéraires sur <a href="https://www.facebook.com/AntiigoneWB" alt="redirection page Facebook" target="_blank" rel="noreferrer" className='link'> <b>sa page Facebook</b></a>, puis sur ce blog. A travers ses avis, elle souhaite aider les auteurs auto-édités et les maisons d'éditions indépendantes à se faire connaître. </p>
         <p>Dans ses lectures, elle apprécie particulièrement les émotions transmises au lecteur, des personnages atypiques aux valeurs fortes et des sujets originaux. </p>
-        <p>Vous êtes auteur et vous pensez que votre roman pourrait lui plaire ? rendez-vous sur la page <a href="/Contact" alt="redirection page contact"> <b>"contact"</b> </a> pour lui en parler ! </p>
+        <p>Vous êtes auteur et vous pensez que votre roman pourrait lui plaire ? rendez-vous sur la page <a href="/Contact" alt="redirection page contact" className='link'> <b>"contact"</b> </a> pour lui en parler ! </p>
       </div>
 
       <div className="SideBarItem">

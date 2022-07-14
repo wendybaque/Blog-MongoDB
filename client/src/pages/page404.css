@@ -1,0 +1,36 @@
+.page_404{ 
+    display:flex;
+    flex-direction: column;
+    padding:40px 0; 
+    margin: 20px;
+    padding: 20px;
+    background:#fff; 
+    height: 100%;
+}
+
+.page_404  img{ width:100%;}
+
+
+.bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 460px;
+    background-position: center;
+ }
+ 
+ 
+ .bg h1{
+    text-align: center;
+    font-size:80px;
+ }
+ 
+  .bg h3{
+       font-size:80px;
+       text-align: center;
+       }
+
+.contant_box_404 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
