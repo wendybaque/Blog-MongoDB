@@ -40,7 +40,7 @@ export default function TopBar() {
         <li className='TopListItem'><Link to="/Login">Se connecter</Link></li>
         <li className='TopListItem'><Link to="/Register">Créer un compte</Link></li>
     </ul>
-            <i className="TopSearchIcon fa-solid fa-magnifying-glass"></i>
+            {/* <i className="TopSearchIcon fa-solid fa-magnifying-glass"></i> */}
         </div>
     </div>
   )

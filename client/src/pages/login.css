@@ -35,6 +35,7 @@
     padding: 10px;
     margin: 10px 0;
     height: 30px;
+    border:none;
 }
 
 .LoginButton {
@@ -47,6 +48,7 @@
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+    border:none;
 }
 
 .LoginButton:disabled{
@@ -65,4 +67,5 @@
     background-color: tomato;
     color: var(--third-color);
     cursor: pointer;
+    border:none;
 }
