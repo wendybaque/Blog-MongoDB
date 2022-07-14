@@ -1,0 +1,18 @@
+.About {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+}
+
+.About-left {
+    padding: 20px;
+    margin: 20px;
+    flex:5;
+}
+ .About-text {
+    padding: 10px;
+ }
+
+.About-right {
+    flex:3;
+}

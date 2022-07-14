@@ -8,7 +8,7 @@ export default function Footer() {
       Copyright ©2022
       </div>
       <div className="FooterCenter">
-        Made with ❤ by <a href="https://wendybaquedevweb.netlify.app/" alt="Redirection vers le portfolio de Wendy Baqué, développeuse web et web mobile" target="_blank" rel="noreferrer" >Wendy Baqué</a>
+        Made with ❤ by <a href="https://wendybaquedevweb.netlify.app/" alt="Redirection vers le portfolio de Wendy Baqué, développeuse web et web mobile" target="_blank" rel="noreferrer" className='link'>Wendy Baqué</a>
       </div>
       <div className="FooterRight">
         Mentions Légales
