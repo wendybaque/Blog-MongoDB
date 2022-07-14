@@ -47,9 +47,9 @@ function Contact () {
                       <label><input type="mail" placeholder="Votre e-mail" name="user_email" required aria-required="true" className="Contact-input"/></label>
                       <label><input type="tel" placeholder="Votre numéro de téléphone" name="user_phone" required aria-required="true" className="Contact-input"/></label>
                       <label><input type="text" placeholder="Sujet de votre message" name="user_subject" required aria-required="true" className="Contact-input"/></label>
-                      <label><textarea rows="10" placeholder="Votre message" name="message" required aria-required="true" className="Contact-input"/></label>
+                      <label><textarea rows="10" placeholder="Votre message" name="message" required aria-required="true" className="Contact-textarea"/></label>
                       <button type="submit" className="Contact-submit-button">Envoyer !</button>
-                      {done && "Merci pour votre message. Je vous répondrai au plus vite"}
+                      {done && "Merci pour votre message. Je vous répondrai au plus vite 😊"}
                   </form>
               </div>
           </div>
