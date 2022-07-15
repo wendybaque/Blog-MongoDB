@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { useContext } from "react";
-// import { Context } from "./context/Context";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 import "./App.css";
 
 import TopBar from "./components/TopBar";
@@ -17,7 +17,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
-  const { user } = true;
+  const { user } = useContext(Context);
 
   return (
     <div className="App">

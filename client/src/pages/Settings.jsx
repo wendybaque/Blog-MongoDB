@@ -1,5 +1,5 @@
 import React from 'react'
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 import "../pages/settings.css";
 import SideBar from "../components/SideBar";
