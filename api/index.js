@@ -43,6 +43,7 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
+// LA OU LE SERVEUR TOURNE
 app.listen("5000", () => {
   console.log("Backend is running.");
 });
