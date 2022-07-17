@@ -21,27 +21,37 @@ mongoose
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-  // stockage d'un fichier avec multer :
+// stockage d'un fichier avec multer :
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
   },
   filename: (req, file, cb) => {
     cb(null, req.body.name);
+    // Si marche pas, changer req.body.name par string random
   },
 });
 
-// Upload des fichiers avec multer
+// Upload des fichiers avec multer :
 const upload = multer({ storage: storage });
 app.post("/api/upload", upload.single("file"), (req, res) => {
-  res.status(200).json("File has been uploaded");
+  res.status(200).json("Fichier chargé avec succès ! 🥳");
 });
 
 // ROUTES :
+// Route d'authentification :
 app.use("/api/auth", authRoute);
+// Routes pour les utilisateurs :
 app.use("/api/users", userRoute);
+// Routes pour les posts :
 app.use("/api/posts", postRoute);
+// Routes pour les catégories :
 app.use("/api/categories", categoryRoute);
+
+//ROUTE DE BASE :
+// app.use("/", (req,res) => {
+//   console.log("Hey, this is main url");
+// });
 
 // LA OU LE SERVEUR TOURNE
 app.listen("5000", () => {

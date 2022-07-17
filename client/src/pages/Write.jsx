@@ -72,7 +72,7 @@ export default function Write() {
             ></textarea>
           </div>
           <button className="WriteSubmit" type="submit">
-            Publish
+            Publier
           </button>
         </form>
       </div>

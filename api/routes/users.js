@@ -3,8 +3,8 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 const bcrypt = require("bcrypt");
 
-//UPDATE un utilisateur
-// PUT : http://localhost:5000/api/users/:id + changer qqch dans le body
+// UPDATE un utilisateur
+// ROUTE PUT + http://localhost:5000/api/users/:id + changer qqch dans le body
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
@@ -20,16 +20,16 @@ router.put("/:id", async (req, res) => {
         { new: true }
       );
       res.status(200).json(updatedUser);
-    } catch (err) {
+    } catch(err) {
       res.status(500).json(err);
     }
   } else {
-    res.status(401).json("Tu ne peux modifier que ton propre compte !");
+    res.status(401).json("Tu ne peux modifier que ton propre compte ! 😱 ");
   }
 });
 
-//DELETE un utilisateur :
-// DELETE : http://localhost:5000/api/users/:id
+// DELETE un utilisateur :
+// ROUTE DELETE + http://localhost:5000/api/users/:id
 router.delete("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
       try {
@@ -37,26 +37,26 @@ router.delete("/:id", async (req, res) => {
         try {
           await Post.deleteMany({ username: user.username });
           await User.findByIdAndDelete(req.params.id);
-          res.status(200).json("L'utilisateur a bien été supprimé.");
-        } catch (err) {
+          res.status(200).json("L'utilisateur a bien été supprimé. 🥳");
+        } catch(err) {
           res.status(500).json(err);
         }
-      } catch (err) {
-        res.status(404).json("Utilisateur non reconnu.");
+      } catch(err) {
+        res.status(404).json("Utilisateur non reconnu. 🤔");
       }
     } else {
-      res.status(401).json("Tu ne peux modifier que ton propre compte !");
+      res.status(401).json("Tu ne peux supprimer que ton propre compte ! 😱 ");
     }
   });
-  
-  //GET un utilisateur :
-// GET : http://localhost:5000/api/users/:id ou sans id pour tous les utilisateurs
+
+// GET un utilisateur :
+// ROUTE GET + http://localhost:5000/api/users/:id ou sans id pour tous les utilisateurs
   router.get("/:id", async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
       const { password, ...others } = user._doc;
       res.status(200).json(others);
-    } catch (err) {
+    } catch(err) {
       res.status(500).json(err);
     }
   });
