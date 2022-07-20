@@ -39,8 +39,9 @@ function Contact () {
         </Helmet>
 
               <div className="Contact-wrapper">
-                  <p> Vous souhaitez commander l'un de mes romans au format broché avec une dédicace personnalisée ?</p>
-                  <p> Ou vous avez tout simplement une question sur mes livres ?</p>
+                  <p> Vous êtes auteur.e et vous pensez que vous livre peut m'intéresser ? Vous souhaitez me le proposer pour une chronique ?</p>
+                  <p> Une petite description, un résumé et quelques mots pour me donner envie de le lire seront appréciés. 😉</p>
+                  <p> Ou vous avez tout simplement une question sur mes livres ou mes chroniques ?</p>
                   <p> <span className='Contact-span'> Rendez-vous dans le formulaire ci-dessous.</span></p>
                   <form ref={formRef} onSubmit={handleSubmit} className="Contact-form">
                       <label>Nom</label>

@@ -53,7 +53,7 @@ export default function SinglePost() {
     <div className="SinglePost">
       <div className="SinglePostWrapper">
         {post.photo && (
-          <img src={PF + post.photo} alt="" className="SinglePostImg" />
+          <img src={PF + post.photo} alt="Bannière du post" className="SinglePostImg" />
         )}
         {updateMode ? (
           <input
