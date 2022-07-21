@@ -20,19 +20,19 @@ export default function Write() {
         desc,
       };
       if (file) {
-        const data =new FormData();
+        const data = new FormData();
         const filename = Date.now() + file.name;
         data.append("name", filename);
         data.append("file", file);
         newPost.photo = filename;
         try {
           await axios.post("/upload", data);
-        } catch (err) {}
+        } catch(err) {}
       }
       try {
         const res = await axios.post("/posts", newPost);
         window.location.replace("/post/" + res.data._id);
-      } catch (err) {}
+      } catch(err) {}
     };
     return (
       <div className="Write">
@@ -42,7 +42,9 @@ export default function Write() {
                 <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
         {file && (
-          <img className="WriteImg" src={URL.createObjectURL(file)} alt="" />
+          <img className="WriteImg" 
+          src={URL.createObjectURL(file)} 
+          alt="Bannière de post" />
         )}
         <form className="WriteForm" onSubmit={handleSubmit}>
           <div className="WriteFormGroup">

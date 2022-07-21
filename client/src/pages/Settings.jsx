@@ -1,5 +1,4 @@
 import "./settings.css";
-import Sidebar from "../components/SideBar";
 import { useContext, useState } from "react";
 import { Context } from "../context/Context";
 import { Helmet } from "react-helmet"
@@ -44,7 +43,7 @@ export default function Settings() {
   };
   return (
     <div className="Settings">
-      <Helmet>
+        <Helmet>
                 <meta charSet="utf-8" />
                 <title>Paramètres du compte | Blog d'Antiigone</title>
                 <link rel="canonical" href="http://mysite.com/example" />
@@ -59,7 +58,7 @@ export default function Settings() {
           <div className="SettingsPP">
             <img
               src={file ? URL.createObjectURL(file) : PF + user.profilePic}
-              alt=""
+              alt="Profil de l'utilisateur"
             />
             <label htmlFor="fileInput">
               <i className="SettingsPPIcon far fa-user-circle"></i>
@@ -100,7 +99,6 @@ export default function Settings() {
           )}
         </form>
       </div>
-      <Sidebar />
     </div>
   );
 }
