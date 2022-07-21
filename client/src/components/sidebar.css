@@ -34,7 +34,9 @@
 }
 
 .SideBarItem > p {
-    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 1em;
 }
 
 .SideBarList {
@@ -75,3 +77,4 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px #FFBB98;
 }
+

@@ -21,18 +21,17 @@ function App() {
 
   return (
     <div className="App">
-        
         <Router>
           <TopBar />
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/register" element={user ? <Home/> : <Register />} />
                 <Route path="/login" element={user ? <Home/> : <Login />} />
-                <Route path="/Write" element={user ? <Write /> : <Register />} />
-                <Route path="/Settings" element={user ? <Settings /> : <Register/>} />
-                <Route path="/Post/:postId" element={<Single />} />
-                <Route path="/About" element={<About />} />
-                <Route path="/Contact" element={<Contact />} />
+                <Route path="/write" element={user ? <Write /> : <Register />} />
+                <Route path="/settings" element={user ? <Settings /> : <Register/>} />
+                <Route path="/post/:postId" element={<Single />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<Page404 />} />
                 </Routes>
           < Footer />

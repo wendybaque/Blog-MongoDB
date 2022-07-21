@@ -22,3 +22,15 @@
 .FooterCenter {
     flex: 3;
 }
+
+@media screen and (max-width: 480px) {
+    .Footer {
+        display: block;
+    }
+    .FooterLeft, .FooterRight {
+        display: none;
+    }
+    .FooterCenter {
+        text-align: center;
+    }
+}

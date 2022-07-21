@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background : linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://i.pinimg.com/originals/6e/2e/4d/6e2e4d84608fdbf27d8e29296e3e201c.jpg");
+    background : linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://i.pinimg.com/originals/26/01/ca/2601ca72d409c2821feba594329dac80.jpg");
     background-size: cover;
     overflow-y: hidden;
 }
@@ -80,4 +80,14 @@
     margin-top: 20px;
     cursor: pointer;
     border:none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .Contact-input{
+        width: 22em;
+    }
+    .Contact-textarea {
+        width: 22em;
+    }
 }
